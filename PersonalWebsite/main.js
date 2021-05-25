@@ -32,10 +32,6 @@ scene.add(shape);
 const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(ambientLight)
 
-const gridHelper = new THREE.GridHelper(200,50)
-//scene.add(gridHelper)
-
-const controls = new OrbitControls(camera, renderer.domElement);
 
 function addStar() {
   const geometry = new THREE.SphereGeometry(0.1,24,24);
@@ -63,6 +59,10 @@ function animate() {
 
   renderer.render( scene, camera );
 }
+
+camera.position.z = 0;
+camera.position.x = 0;
+camera.position.y = 0;
 
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
