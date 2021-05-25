@@ -4,6 +4,7 @@ import * as THREE from 'three';
 
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
+// initialize camera and scene
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera( 65, window.innerWidth/ window.innerHeight, 0.1, 1000 );
@@ -19,6 +20,7 @@ camera.position.setZ(30);
 
 renderer.render( scene, camera );
 
+// create torus shape
 const geometry = new THREE.TorusKnotGeometry( 10, 3, 100, 16 );
 const material = new THREE.MeshBasicMaterial( {
 	color: 0x7ae7ff,
@@ -29,10 +31,11 @@ const shape = new THREE.Mesh( geometry, material );
 
 scene.add(shape);
 
+// add lighting
 const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(ambientLight)
 
-
+// add stars
 function addStar() {
   const geometry = new THREE.SphereGeometry(0.1,24,24);
   const material = new THREE.MeshStandardMaterial({color: 0xffffff, wireframe: true })
@@ -46,9 +49,11 @@ function addStar() {
 
 Array(200).fill().forEach(addStar);
 
+// background
 const texture = new THREE.TextureLoader().load('tron2.jpg');
 scene.background = texture;
 
+// rotate objects
 function animate() {
   requestAnimationFrame( animate );
 
@@ -60,10 +65,12 @@ function animate() {
   renderer.render( scene, camera );
 }
 
+// initialize camera position
 camera.position.z = 0;
 camera.position.x = 0;
 camera.position.y = 0;
 
+// move camera back abd rotate objects on scroll
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
 
