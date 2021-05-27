@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 
 canvas {
@@ -32,7 +38,13 @@ main {
   grid-template-columns: repeat(12, 1fr);
 }
 
-h1, h2, h3, blockquote {
+h1, h2, h3 {
+  font-family: Roboto, sans-serif;
+  font-weight: 1000;
+  font-style: normal;
+}
+
+blockquote {
   font-family: elevon, sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -92,7 +104,7 @@ a, a:hover {
   margin: 0;
   padding-top: 0;
   padding-bottom: 5px;
-  padding-right: 75px;
+  padding-right: 50px;
 }
 
 .socialbtns ul, .socialbtns li {
@@ -104,7 +116,7 @@ a, a:hover {
   font-size: 40px;
 	color: white;
   margin-top: 0px;
-  padding-left: 100%;
+  padding-left: 50%;
 }
 
 .socialbtns .fa:hover {
@@ -122,4 +134,57 @@ a, a:hover {
 
 .space {
   padding-top: 2500%;
+}
+
+/* scroll icon */
+body {
+  background:#0b1d2a;
+}
+
+.arrows {
+	width: 60px;
+	height: 72px;
+	position: fixed;
+	right: 50%;
+	margin-left: -30px;
+	bottom: 20px;
+}
+
+.arrows path {
+	stroke: white;
+	fill: transparent;
+	stroke-width: 1px;	
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {	
+	animation-delay:0s;
+	-webkit-animation-delay:0s; /* Safari 和 Chrome */
 }
