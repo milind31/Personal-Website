@@ -1,10 +1,8 @@
+// imports
 import './style.css'
-
 import * as THREE from 'three';
 
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-
-// initialize camera and scene
+// initialize environment
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera( 65, window.innerWidth/ window.innerHeight, 0.1, 1000 );
@@ -29,9 +27,11 @@ const torusMaterial = new THREE.MeshStandardMaterial( {
 const torus = new THREE.Mesh( torusGeometry, torusMaterial );
 scene.add(torus);
 
+// add hemisphere lighting
 const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 1 );
 scene.add( light );
 
+// add directional lighting
 const directional1 = new THREE.DirectionalLight( 0xffffff, 0.6 );
 directional1.position.set(-20,40,0);
 scene.add(directional1);
@@ -68,7 +68,6 @@ function animate() {
 
   renderer.setSize( window.innerWidth, window.innerHeight );
   renderer.render( scene, camera );
-  
 }
 
 // initialize camera position
@@ -87,13 +86,11 @@ function moveCamera() {
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
   camera.position.y = t * -0.0002;
-
-
-
 }
 
 document.body.onscroll = moveCamera;
 
+// arrows to indicate scroll
 document.onscroll = function() {
   if (window.innerHeight + window.scrollY > document.body.clientHeight) {
       document.getElementById('arrows').style.display='none';
