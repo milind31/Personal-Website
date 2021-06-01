@@ -44,9 +44,12 @@ main {
 
 h1, h2, h3 {
   font-family: Roboto, sans-serif;
-  font-weight: 1000;
   font-style: normal;
+  font-size: 4.5vw;
 }
+h3{
+  font-size: 150%;
+} 
 h2{
   font-size: 200%;
 }
@@ -68,9 +71,9 @@ canvas {
   header {
     background: var(--dark-bg);
     grid-column: 2 / span 5;
-    font-size: 2.5rem;
     padding: 2rem;
     margin-bottom: var(--spacing);
+    position: relative;
   }
 
   section {
@@ -80,6 +83,7 @@ canvas {
     font-size: 1.25rem;
     line-height: 1.5;
     margin-bottom: var(--spacing);
+    text-align: left;
   }
 
   blockquote {
@@ -120,7 +124,7 @@ a, a:hover {
 }
 
 .socialbtns .fa {
-  font-size: 40px;
+  font-size: 2.5vw;
 	color: white;
   margin-top: 0px;
   padding-left: 50%;
