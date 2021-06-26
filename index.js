@@ -2,6 +2,13 @@
 import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
 const canvas = document.querySelector('canvas.webgl')
 
+//scaling to screen
+var siteWidth = 1280;
+var scale = screen.width /siteWidth;
+
+document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
+
+
 // initialize environment
 const scene = new THREE.Scene();
 
