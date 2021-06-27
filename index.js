@@ -8,19 +8,6 @@ var scale = screen.width /siteWidth;
 
 document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
 
-// Renderer gets updated each time window is resized
-window.addEventListener('resize',()=>{
-    sizes.width = window.innerWidth
-    sizes.height = window.innerHeight
-
-    camera.aspect = sizes.width/sizes.height
-    camera.updateProjectionMatrix()
-
-    renderer.setSize(sizes.width,sizes.height)
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio,2))
-    
-})
-
 // initialize environment
 const scene = new THREE.Scene();
 
