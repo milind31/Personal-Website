@@ -100,6 +100,7 @@ document.body.onscroll = moveCamera;
 document.onscroll = function() {
   if (window.innerHeight + window.scrollY > document.body.clientHeight) {
       document.getElementById('arrows').style.display='none';
+      document.getElementById('scroll-text').style.display='none';
   }
 }
 
