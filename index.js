@@ -190,10 +190,10 @@ function moveCamera() {
     sphere.position.y = window.scrollY * 0.004
     sphere.position.y = window.scrollY * 0.004
 
-    torus.position.y += (window.scrollY - prev) * (4.80 / window.innerHeight) ;
-    cube1.position.y += (window.scrollY - prev) * (4.80 / window.innerHeight) ;
-    cube2.position.y += (window.scrollY - prev) * (4.80 / window.innerHeight) ;
-    cube3.position.y += (window.scrollY - prev) * (4.80 / window.innerHeight) ;
+    torus.position.y += (window.scrollY - prev) * (4.75 / window.innerHeight) ;
+    cube1.position.y += (window.scrollY - prev) * (4.75 / window.innerHeight) ;
+    cube2.position.y += (window.scrollY - prev) * (4.75 / window.innerHeight) ;
+    cube3.position.y += (window.scrollY - prev) * (4.75 / window.innerHeight) ;
     
     console.log(window.scrollY)
 
