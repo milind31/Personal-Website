@@ -233,7 +233,7 @@ function hoverCube() {
         }
         else {
             intersects[i].object.position.z += 0.1;
-            $('html,body').css('cursor', 'pointer');
+            //$('html,body').css('cursor', 'pointer');
         }
         renderer.render(scene, camera)
     }
