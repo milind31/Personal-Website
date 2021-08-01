@@ -219,7 +219,7 @@ function resetFromHover() {
     cube1.position.z = 0.14;
     cube2.position.z = 0
     cube3.position.z = 0
-    $('html,body').css('cursor', 'default');
+    //$('html,body').css('cursor', 'default');
 }
 
 // Move cube and show hand cursor when hovering over one
