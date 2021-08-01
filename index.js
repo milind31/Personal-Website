@@ -178,7 +178,7 @@ const onDocumentMouseMove = (event) => {
     mouseY = (event.clientY - windowHalfY);
 
     normalMouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
-	normalMouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+    normalMouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
 }
 
 // Move camera back and rotate objects on scroll
@@ -219,7 +219,7 @@ function resetFromHover() {
     cube1.position.z = 0.14;
     cube2.position.z = 0
     cube3.position.z = 0
-    //$('html,body').css('cursor', 'default');
+    $('html,body').css('cursor', 'default');
 }
 
 // Move cube and show hand cursor when hovering over one
@@ -233,7 +233,7 @@ function hoverCube() {
         }
         else {
             intersects[i].object.position.z += 0.1;
-            //$('html,body').css('cursor', 'pointer');
+            $('html,body').css('cursor', 'pointer');
         }
         renderer.render(scene, camera)
     }
