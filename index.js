@@ -145,7 +145,7 @@ scene.add(camera)
 
 var vFOV = camera.fov * Math.PI / 180;        // convert vertical fov to radians
 var height = 2 * Math.tan( vFOV / 2 ) * 200; // visible height
-console.log(height);
+
 // Controls
 // const controls = new OrbitControls(camera, canvas)
 // controls.enableDamping = true
@@ -190,12 +190,10 @@ function moveCamera() {
     sphere.position.y = window.scrollY * 0.004
     sphere.position.y = window.scrollY * 0.004
 
-    torus.position.y += (window.scrollY - prev) * (4.75 / window.innerHeight) ;
-    cube1.position.y += (window.scrollY - prev) * (4.75 / window.innerHeight) ;
-    cube2.position.y += (window.scrollY - prev) * (4.75 / window.innerHeight) ;
-    cube3.position.y += (window.scrollY - prev) * (4.75 / window.innerHeight) ;
-    
-    console.log(window.scrollY)
+    torus.position.y += (window.scrollY - prev) * (4.75 / window.innerHeight);
+    cube1.position.y += (window.scrollY - prev) * (4.75 / window.innerHeight);
+    cube2.position.y += (window.scrollY - prev) * (4.75 / window.innerHeight);
+    cube3.position.y += (window.scrollY - prev) * (4.75 / window.innerHeight);
 
     prev = window.scrollY
 
