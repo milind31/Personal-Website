@@ -81,7 +81,7 @@ h1 {
 
 .work-exp .content{
     height: 95vh;
-    width: 82%;
+    width: 60%;
 }
 
 .projects {
@@ -141,7 +141,6 @@ h1 {
 }
 
 
-
 h4 {
     position: fixed;
     right: 48%;
@@ -150,24 +149,24 @@ h4 {
     text-shadow: 2px 2px 5px black;
     color: white;
     padding-top: 16px;
-  }
+}
   
-  .arrows {
-      width: 60px;
-      height: 72px;
-      position: fixed;
-      right: 48%;
-      bottom: 60px;
-      padding-bottom: 16px;
-  }
+.arrows {
+    width: 60px;
+    height: 72px;
+    position: fixed;
+    right: 48%;
+    bottom: 60px;
+    padding-bottom: 16px;
+}
   
-  .arrows path {
-      stroke: white;
-      fill: transparent;
-      stroke-width: 1px;	
-      animation: arrow 2s infinite;
-      -webkit-animation: arrow 2s infinite;
-  }
+.arrows path {
+    stroke: white;
+    fill: transparent;
+    stroke-width: 1px;	
+    animation: arrow 2s infinite;
+    -webkit-animation: arrow 2s infinite;
+}
   
   @keyframes arrow
   {
@@ -185,17 +184,17 @@ h4 {
   100% {opacity:0}
   }
   
-  .arrows path.a1 {
-      animation-delay:-1s;
-      -webkit-animation-delay:-1s; /* Safari 和 Chrome */
-  }
+.arrows path.a1 {
+    animation-delay:-1s;
+    -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
   
-  .arrows path.a2 {
-      animation-delay:-0.5s;
-      -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
-  }
+.arrows path.a2 {
+    animation-delay:-0.5s;
+    -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
   
-  .arrows path.a3 {	
-      animation-delay:0s;
-      -webkit-animation-delay:0s; /* Safari 和 Chrome */
-  }
+.arrows path.a3 {	
+    animation-delay:0s;
+    -webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
